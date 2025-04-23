@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import "../styles/Home.css";
 
 const roles = ["Student", "UI/UX Designer", "Full-Stack Web Developer"];
