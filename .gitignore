@@ -1,12 +1,7 @@
-# dependencies
-/node_modules
 
-# production
-/build
 
-# misc
+node_modules/
+.cache/
+build/
 .DS_Store
 .env
-.cache
-.eslintcache
-*.log
