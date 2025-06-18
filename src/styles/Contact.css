@@ -24,9 +24,10 @@
   justify-content: center;
   align-items: stretch;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* force single row */
+  overflow-x: auto; /* scroll if not enough space */
   width: 90%;
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
   flex-direction: row;
   padding: 20px 0;
@@ -37,10 +38,11 @@
   padding: 24px;
   border-radius: 12px;
   border-left: 4px solid #00ffcc;
-  flex: 1 1 260px;
-  max-width: 350px;
+  flex: 0 0 280px;
+  max-width: 280px;
   box-shadow: 0 4px 10px rgba(0, 255, 204, 0.1);
   transition: transform 0.3s ease;
+  min-width: 260px;
 }
 
 .contact-card:hover {
@@ -97,6 +99,8 @@ section.contact {
     align-items: center;
     width: 100%;
     gap: 14px;
+    flex-wrap: wrap; /* restore wrapping on mobile */
+    overflow-x: visible;
   }
 
   .contact-card {

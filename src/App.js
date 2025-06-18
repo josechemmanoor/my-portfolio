@@ -10,9 +10,9 @@ import Resume from "./components/Resume";
 
 function App() {
   return (
-    <div className="app-wrapper">
+    <div className="app-wrapper" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Navbar />
-      <div className="container">
+      <div className="container" style={{ flex: 1 }}>
         <section id="home"><Home /></section>
         <section id="about"><About /></section>
         <section id="education"><Education /></section>
@@ -21,6 +21,11 @@ function App() {
         <section id="contact"><Contact /></section>
         <section id="resume"><Resume /></section>
       </div>
+      
+      {/* 🔻 Footer */}
+      <footer className="footer">
+        © {new Date().getFullYear()} Designed and Developed by Jose Chemmanoor
+      </footer>
     </div>
   );
 }
