@@ -1,11 +1,13 @@
 import React from "react";
 import "../styles/Contact.css";
+import "../styles/global.css";
+
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <section className="contact" id="contact">
-      <h1 className="contact-heading">Contact</h1>
+    <h1 class="section-heading">Contact Me</h1>
       <div className="contact-container">
         <div className="contact-card">
           <div className="contact-icon-container">

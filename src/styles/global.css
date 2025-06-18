@@ -1,94 +1,84 @@
-/* 🌌 Animated Gradient Background for full website */
-body, html {
+ {
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100%;
-  background: linear-gradient(45deg, #000428, #011c33, #000428);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
   box-sizing: border-box;
 }
 
-/* 🔁 Animate background smoothly */
+html, body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #000428, #011c33, #000428);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  overflow-x: hidden; 
+  overflow-y: auto; 
+}
+
+/* 🔥 Animated Gradient Background */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* 🌐 Make all elements responsive by default */
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-/* 🧱 Basic layout container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* 📱 Typography responsive scaling */
+/* 💡 Default text styles */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
   line-height: 1.2;
-  text-align: center;
-  word-wrap: break-word;
 }
 
 p {
-  line-height: 1.6;
   font-size: 1rem;
-  text-align: justify;
-  margin: 0.5rem 0;
+  color: #cccccc;
+  margin-bottom: 1rem;
 }
 
-/* 🧭 Responsive image styling */
+/* 🔗 Anchor defaults */
+a {
+  color: #00eaff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00ffcc;
+}
+
+/* 💻 Responsive media */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* 📱 Responsive buttons */
-button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #1e90ff;
-  color: white;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.section-heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  background: linear-gradient(90deg, #00eaff, #a7d8de);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: left;
+  margin-bottom: 40px;
+  width: 100%;
+  margin-left: 100px;
 }
 
-button:hover {
-  background-color: #187bcd;
-}
-
-/* 📱 Media Queries for smaller screens */
 @media (max-width: 768px) {
-  .container {
-    width: 95%;
-    padding: 10px;
+  .section-heading {
+    font-size: 2rem;
+    margin-left: 0;
+    text-align: center;
   }
 
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-
-  button {
-    width: 100%;
-    font-size: 1rem;
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
+    text-align: center;
   }
 }

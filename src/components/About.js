@@ -6,7 +6,7 @@ function About() {
   return (
     <div className="about">
       <div className="about-content">
-        <h1 className="about-heading">About</h1>
+      <h1 class="section-heading">About</h1>
         <p className="about-text">
           Welcome to my digital space! I'm <strong>Jose Chemmanoor</strong>, a passionate BTech student specializing in 
           Computer Science and Engineering at Rajagiri School of Engineering and Technology (RSET) in Kakkanad, Kochi. 

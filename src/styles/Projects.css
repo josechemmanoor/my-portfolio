@@ -1,79 +1,111 @@
 .projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+   position: relative;
   width: 100%;
-  padding: 50px;
+  padding: 60px 40px;
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
-  color: #fff;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
 }
 
-/* Background Gradient Animation */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ✅ Heading (No Glow) */
-.projects-heading {
-  font-size: 3rem;
-  font-weight: bold;
-  position: relative;
-  top: 0px;
-  left: -660px;
-  background: linear-gradient(90deg, #00eaff, #a7d8de);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent; /* Gradient effect */
-  text-align: left;
-}
-  
-/* ✅ Grid Layout for Projects */
+/* Remove .projects-heading - Use .section-heading in component */
+
+/* Grid container */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* ✅ Project Card (No Glow) */
+/* Card styling */
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 24px;
+  border-radius: 12px;
   border-left: 4px solid #00ffcc;
   transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(4px);
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
-/* ✅ Project Title */
 .project-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
   color: #fff;
-  text-shadow: none;
+  font-weight: bold;
 }
 
-/* ✅ Project Description */
 .project-card p {
   font-size: 1rem;
   color: #ccc;
   margin-bottom: 10px;
-  text-shadow: none;
 }
 
-/* ✅ Tech Used */
 .tech {
   font-size: 0.9rem;
   font-weight: bold;
   color: #00ffcc;
-  text-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 20px;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 350px;
+    padding: 18px;
+  }
+
+  .project-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
+
+  .tech {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .tech {
+    font-size: 0.8rem;
+  }
 }

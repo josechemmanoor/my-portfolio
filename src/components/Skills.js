@@ -1,6 +1,15 @@
 import React from "react";
 import "../styles/Skills.css";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaPython } from "react-icons/fa";
+import "../styles/global.css";
+
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaNodeJs,
+  FaPython
+} from "react-icons/fa";
 
 const skills = [
   { name: "React", icon: <FaReact className="skill-icon" /> },
@@ -13,17 +22,19 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="skills">
-      <h1 className="skills-heading">Skills</h1>
-      <div className="skills-grid">
-        {skills.map((skill, index) => (
-          <div className="skill-card" key={index}>
-            {skill.icon}
-            <p>{skill.name}</p>
-          </div>
-        ))}
+    <section className="skills">
+      <div className="skills-inner">
+        <h2 className="section-heading">Skills</h2>
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <div className="skill-card" key={index}>
+              {skill.icon}
+              <p>{skill.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

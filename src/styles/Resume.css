@@ -1,18 +1,23 @@
-/* Resume.css */
 .resume-section {
   min-height: 100vh;
-  padding: 80px 10% 40px;
+  padding: 60px 40px;
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
   color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+/* Animated Gradient Background */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* Unified Heading */
 .resume-title {
   font-size: 3rem;
   font-weight: bold;
@@ -21,17 +26,21 @@
   -webkit-background-clip: text;
   color: transparent;
   text-align: left;
-  margin-left: -105px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
+/* Resume Links Container */
 .resume-links {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
   max-width: 800px;
+  margin-left: 105px;
 }
 
+/* Each Resume Link */
 .resume-link {
   display: flex;
   align-items: center;
@@ -51,30 +60,35 @@
   transform: translateX(5px);
 }
 
+/* Icon Styling */
 .link-icon {
   font-size: 1.2rem;
 }
 
+/* Medium Screen Adjustments */
 @media (max-width: 768px) {
   .resume-section {
-    padding: 60px 5% 30px;
+    padding: 40px 20px;
+    align-items: center;
   }
-  
+
   .resume-title {
+    text-align: center;
     font-size: 2.5rem;
   }
-  
+
   .resume-link {
     font-size: 1.2rem;
   }
 }
 
+/* Small Screen Adjustments */
 @media (max-width: 480px) {
   .resume-title {
     font-size: 2rem;
     margin-bottom: 30px;
   }
-  
+
   .resume-link {
     font-size: 1.1rem;
   }

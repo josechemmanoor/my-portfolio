@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Projects.css";
+import "../styles/global.css";
+
 
 const projects = [
   {
@@ -17,7 +19,7 @@ const projects = [
 const Projects = () => {
   return (
     <div className="projects">
-      <h1 className="projects-heading">Projects</h1>
+    <h1 class="section-heading">Projects</h1>
       <div className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project-card">

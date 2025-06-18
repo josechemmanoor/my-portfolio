@@ -1,14 +1,16 @@
 // src/components/Resume.js
 import React from "react";
 import { FaExternalLinkAlt, FaDownload } from "react-icons/fa";
-import "../styles/Resume.css"; // Make sure this exists or remove this line
+import "../styles/Resume.css"; 
+import "../styles/global.css";
+
 
 const Resume = () => {
   const resumePdf = process.env.PUBLIC_URL + "/resume.pdf"; // use PUBLIC_URL for safety
 
   return (
     <div className="resume-section" id="resume">
-      <h1 className="resume-title">My Resume</h1>
+    <h1 class="section-heading">Resume</h1>
 
       <div className="resume-links">
         <a 

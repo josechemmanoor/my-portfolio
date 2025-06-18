@@ -2,86 +2,77 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Ensures vertical centering */
-  height: 100vh;
-  width: 100%;
+  justify-content: center;
   text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 20px;
   background-size: 400% 400%;
   animation: gradientAnimation 10s ease infinite;
-  color: #fff;
-  gap: 10px; /* Uniform spacing */
+  color: #ffffff;
+  gap: 24px;
+  box-sizing: border-box;
 }
 
+/* 🔄 Background Animation */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ✅ No neon or glow, just clean text */
+/* 🧍 Small Intro Text */
 .small-text {
-  font-size: 1.5rem;
-  color: #ffffff; /* Pure white */
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: none;
   margin: 0;
-  text-shadow: none; /* Ensure no glow */
 }
 
+/* 🔠 Big Gradient Heading */
 .big-text {
-  font-size: 4rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #00eaff, #a7d8de); /* Adjust gradient colors */
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00eaff, #a7d8de);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Makes the text take the gradient */
-  text-align: center;
-  margin: 0px;
-  text-shadow: none; /* Explicitly remove glow */
-}
-
-.dynamic-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff; /* Pure white */
+  -webkit-text-fill-color: transparent;
   margin: 0;
-  animation: fadeIn 1s ease-in-out infinite alternate;
-  text-shadow: none; /* Remove any glow effect */
 }
 
-/* ✅ Clean Box (No Glow) */
+/* 🌀 Animated Subtext */
+.dynamic-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+  text-shadow: none;
+  margin: 0;
+}
+
+/* 🔘 Call-to-Action Box */
 .box {
   padding: 12px 30px;
   border: 2px solid #00ffcc;
-  border-radius: 10px;
-  background: rgba(0, 255, 204, 0.1); /* Light background */
+  border-radius: 12px;
+  background: rgba(0, 255, 204, 0.08);
   transition: all 0.3s ease-in-out;
-  margin-top: 10px;
   cursor: pointer;
 }
 
 .box:hover {
-  background: rgba(0, 255, 204, 0.2); /* Slight hover effect */
+  background: rgba(0, 255, 204, 0.18);
   transform: scale(1.05);
 }
 
+/* 📄 Button Text */
 .box-text {
-  text-decoration: none;
-  color: #ffffff; /* Normal white text */
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: none; /* Ensure no glow */
-}
-
-/* ✅ Smooth fade animation for Dynamic Text */
-@keyframes fadeIn {
-  from { opacity: 0.7; }
-  to { opacity: 1; }
-}
-
-/* Add to Home.css */
-.box-text {
-  cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -89,9 +80,51 @@
   transform: translateY(-2px);
 }
 
+/* 🔄 Subtext Animation */
+@keyframes fadeIn {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
+
+/* 📱 Responsive: Tablet */
 @media (max-width: 768px) {
+  .home {
+    gap: 30px;
+    padding: 30px 16px;
+  }
+
+  .small-text {
+    font-size: 1.4rem;
+  }
+
+  .big-text {
+    font-size: 2.2rem;
+  }
+
+  .dynamic-text {
+    font-size: 1.2rem;
+  }
+
   .box {
     width: 90%;
-    max-width: 300px;
+    max-width: 280px;
+    padding: 10px 20px;
+  }
+
+  .box-text {
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Responsive: Mobile */
+@media (max-width: 480px) {
+  .box {
+    width: 80%;
+    max-width: 220px;
+    padding: 10px 18px;
+  }
+
+  .box-text {
+    font-size: 0.95rem;
   }
 }
