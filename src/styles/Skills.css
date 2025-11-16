@@ -1,0 +1,77 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #fff;
+  gap: 20px;
+}
+
+/* Background Gradient Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✅ Heading with Gradient Effect */
+.skills-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  top: 0px;
+  left: -650px;
+  background: linear-gradient(90deg, #00eaff, #a7d8de);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Gradient effect */
+  text-align: left;
+}
+
+/* ✅ Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  width: 80%;
+  max-width: 900px;
+  justify-items: center;
+}
+
+/* ✅ Skill Card */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Skill Icon */
+.skill-icon {
+  font-size: 3rem;
+  color: #00eaff;
+}
+
+/* ✅ Skill Text */
+.skill-card p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #ffffff;
+  text-shadow: none;
+}
+

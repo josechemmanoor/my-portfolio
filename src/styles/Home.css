@@ -1,0 +1,97 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensures vertical centering */
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #fff;
+  gap: 10px; /* Uniform spacing */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✅ No neon or glow, just clean text */
+.small-text {
+  font-size: 1.5rem;
+  color: #ffffff; /* Pure white */
+  margin: 0;
+  text-shadow: none; /* Ensure no glow */
+}
+
+.big-text {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00eaff, #a7d8de); /* Adjust gradient colors */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes the text take the gradient */
+  text-align: center;
+  margin: 0px;
+  text-shadow: none; /* Explicitly remove glow */
+}
+
+.dynamic-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff; /* Pure white */
+  margin: 0;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+  text-shadow: none; /* Remove any glow effect */
+}
+
+/* ✅ Clean Box (No Glow) */
+.box {
+  padding: 12px 30px;
+  border: 2px solid #00ffcc;
+  border-radius: 10px;
+  background: rgba(0, 255, 204, 0.1); /* Light background */
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.box:hover {
+  background: rgba(0, 255, 204, 0.2); /* Slight hover effect */
+  transform: scale(1.05);
+}
+
+.box-text {
+  text-decoration: none;
+  color: #ffffff; /* Normal white text */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: none; /* Ensure no glow */
+}
+
+/* ✅ Smooth fade animation for Dynamic Text */
+@keyframes fadeIn {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
+
+/* Add to Home.css */
+.box-text {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.box-text:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,83 @@
+/* Contact.css */
+.contact {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 50px;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #fff;
+}
+
+.contact-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00eaff, #a7d8de);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #00ffcc;
+  min-width: 250px;
+  flex: 1;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: #00eaff;
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.contact-card a {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-all;
+}
+
+.contact-card a:hover {
+  color: #00ffcc;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .contact-heading {
+    margin-left: 20px;
+    font-size: 2.5rem;
+  }
+}
+
+/* Add to Contact.css */
+.contact-icon-container {
+  margin-bottom: 1rem;
+}
+
+section.contact {
+  scroll-margin-top: 80px; /* Adjust based on your navbar height */
+}

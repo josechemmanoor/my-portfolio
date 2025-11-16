@@ -1,0 +1,87 @@
+/* ✅ Education Section */
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center aligns the timeline */
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  position: relative;
+}
+
+/* Background Gradient Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✅ Heading (Left-Aligned with Gradient, No Glow) */
+.education-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  background: linear-gradient(90deg, #00eaff, #a7d8de);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Gradient effect */
+  text-align: left;
+}
+
+/* ✅ Timeline Container */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+}
+
+/* ✅ Timeline Entry */
+.education-entry {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  padding: 15px 20px;
+  border-left: 4px solid #00ffcc; /* Keeps timeline visual */
+  width: 100%;
+  position: relative;
+}
+
+/* ✅ Year (Aligned Properly, No Glow) */
+.education-year {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a7d8de;
+  min-width: 120px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+/* ✅ Education Details (No Glow, Clean Text) */
+.education-details {
+  flex: 1;
+}
+
+.education-details h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.education-details p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #cccccc;
+  font-weight: normal;
+  text-shadow: none;
+}
